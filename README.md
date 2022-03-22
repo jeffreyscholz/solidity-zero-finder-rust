@@ -19,3 +19,5 @@ The gas cost of a function name is 4 times the number of zero bytes, and 12 time
 `./target/release/eth-zero-finder "myFunctionName?(uint,address,...)"`
 
 The question mark will be substituted with a hex number found by searching. Your function should follow the format for solidity function selectors. Eg: No arguments: "myFunction()". One address argument: "myFunction(address)". Two arguments: "anotherFunction(uint256,address)" etc.
+
+The search usually completes in less than 10 minutes on a macbook pro.
