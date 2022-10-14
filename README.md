@@ -18,7 +18,7 @@ If the zeros are leading zeros, this will make the contract smaller and save gas
 `cargo build --release`
 
 ## Run
-`./target/release/eth-zero-finder "myFunctionName?(uint,address,...)"<num threads> (true|false)`
+`./target/release/eth-zero-finder "myFunctionName?(uint,address,...)" <num threads> (true|false)`
 
 The question mark will be substituted with a hex number found by searching. Your function should follow the format for solidity function selectors. Eg: No arguments: "myFunction()". One address argument: "myFunction(address)". Two arguments: "anotherFunction(uint256,address)" etc.
 
