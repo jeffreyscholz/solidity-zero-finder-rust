@@ -15,7 +15,14 @@ If the zeros are leading zeros, this will make the contract smaller and save gas
 [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
 
 ## Build
-`cargo build --release`
+
+```bash
+rustup update
+git clone https://github.com/jeffreyscholz/solidity-zero-finder-rust.git
+cd solidity-zero-finder-rust
+cargo clean
+cargo build --release
+```
 
 ## Run
 `./target/release/eth-zero-finder "myFunctionName?(uint,address,...)" <num threads> (true|false)`
