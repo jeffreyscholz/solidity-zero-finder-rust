@@ -5,7 +5,7 @@ For example
 `deposit278591A(uint256)` has a function selector of `00000070`
 but `deposit(uint256)` has a function selector of `b6b55f25`
 
-The function selector is computed as the first 4 bytes of the keccak256 of the function signature. The function signature excludes the variable names. For example, `sendValue(uint256 amount)` is not correct but `sendValue(uin256)` is.
+The function selector is computed as the first 4 bytes of the keccak256 of the function signature. The function signature excludes the variable names. For example, `sendValue(uint256 amount)` is not correct but `sendValue(uint256)` is.
 
 The gas cost of a function name is 4 times the number of zero bytes, and 16 times the number of nonzero bytes. So in the worst case, the gas cost is 64 gas (4 non-zero bytes), and in the best case 28 gas (3 zero and 1 non-zero). An all zero function selector won't compile because that conflicts with the fallback function. Thus, `mint_22F5A30(uint256)` is more efficient than `mint(uint256)`
 
